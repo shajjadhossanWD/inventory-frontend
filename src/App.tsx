@@ -5,17 +5,16 @@ import InventoryTable from './Components/InventoryTable';
 import CreateInventory from './Components/CreateInventory';
 import './App.css'
 
+
 const App: React.FC = () => {
   return (
     <div className='divBackground'>
     <Router>
-      <div className="container">
         <Routes>
           <Route path="/" element={<InventoryTable />} />
           <Route path="/create-inventory" element={<CreateInventory />} />
           <Route path="/edit-inventory/:id" element={<EditInventory />} />
         </Routes>
-      </div>
     </Router>
     </div>
   );
