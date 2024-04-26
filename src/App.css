@@ -15,7 +15,41 @@
   min-height: 100vh;
 }
 
+.p-datatable .p-datatable-header {
+  background: #022742f1;
+  border: 1px solid #0f1c35;
+}
 
+.p-datatable .p-datatable-tbody > thead {
+  background: #011f34;
+  color: white;
+  transition: box-shadow 0.2s;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  background: #011f34;
+  color: white;
+  transition: box-shadow 0.2s;
+}
+
+.p-datatable .p-paginator-bottom{
+  background-color: #011f34;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: #011f34;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .p-input-icon-left .p-inputtext {
+    width: 150px;
+  }
+  .p-button.p-button-help, .p-button-group.p-button-help > .p-button, .p-splitbutton.p-button-help > .p-button, .p-fileupload-choose.p-button-help {
+    font-size: 12px;
+  }
+
+}
 
 .card {
   padding: 2em;

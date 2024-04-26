@@ -64,14 +64,16 @@ export const InventoryTable: React.FC = () => {
     return (
       <React.Fragment>
         <Button icon="pi pi-pencil" className="p-button-rounded p-button-success mr-2" onClick={() => handleEdit(rowData._id)} />
-        <Button icon="pi pi-trash" className="p-button-rounded p-button-warning" onClick={() => handleDelete(rowData._id)} />
+        <Button icon="pi pi-trash" className="p-button-rounded p-button-warning mt-2" onClick={() => handleDelete(rowData._id)} />
       </React.Fragment>
     );
   };
 
   const header = (
     <div className=''>
-      <Button label="Add Inventory" icon="pi pi-plus" onClick={handleAddInventory} className="p-button-success mb-4" />
+      <div className='flex justify-center items-center '>
+        <Button label="Add Inventory" icon="pi pi-plus" onClick={handleAddInventory} className="p-button-success mb-4" />
+      </div>
       <div className="flex justify-between items-center">
         <span className="p-input-icon-left">
           <InputText value={globalFilter} onChange={(e) => setGlobalFilter(e.target.value)} placeholder="Keyword Search" />
@@ -84,7 +86,7 @@ export const InventoryTable: React.FC = () => {
 
   return (
     <div className='p-6'>
-       <h3 className='text-white text-xl text-center'>INVENTORY DATA TABLE</h3>
+      <h2 className='text-slate-400 text-xl text-center p-5'>INVENTORY DATA TABLE</h2>
       <Toast ref={toast} />
       <DataTable ref={dt} value={inventoryData} globalFilter={globalFilter} header={header}
         paginator rows={10} rowsPerPageOptions={[5,10,20]}

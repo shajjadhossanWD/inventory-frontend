@@ -24,7 +24,7 @@ export const CreateInventory: React.FC = () => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:3000/inventory/create-inventory', formData);
-      navigate('/');  // Updated from history.push()
+      navigate('/');  
     } catch (error) {
       console.error('Error creating inventory item:', error);
     }
